@@ -1,0 +1,83 @@
+<!-- All the html files must be stored in the folder named "templates" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHRASEMASTER/Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        p a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>PHRASEMASTER</h1>
+
+    {% if message %}
+        <p style="color:green">{{ message }}</p>
+    {% endif %}
+
+    <form action="/perform_login" method="post">
+        <h3>LOGIN</h3>
+        <label>Enter email</label><br>
+        <input type="email" name="email" required><br>
+        <label>Enter password</label><br>
+        <input type="password" name="password" required><br><br>
+        <input type="submit" value="Login"><br>
+    </form>
+
+    <p>
+        Not a member? Create an account <a href="/register">here</a>.
+    </p>
+</body>
+</html>
