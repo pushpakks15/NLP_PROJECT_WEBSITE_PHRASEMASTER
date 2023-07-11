@@ -3,7 +3,7 @@ import paralleldots
 
 class API:
     def __init__(self):
-        paralleldots.set_api_key(api_key)
+        paralleldots.set_api_key('lY5sxD5viMh6oOgJ5486gsGHhv5L7Nm8EWJ9nyJCBMI')
 
     def perform_sentiment(self,text):
         lang_code = "en"
