@@ -1,3 +1,2 @@
-Flask==1.0.2
-Flask==2.3.2
+Flask>=1.0.2,<=2.3.2
 ParallelDots==3.2.14
